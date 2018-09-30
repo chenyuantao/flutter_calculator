@@ -113,12 +113,11 @@ class NumberButtonState extends State<NumberButton> {
               }
             },
             child: Container(
+              alignment: Alignment.center,
               color: pressed ? Colors.grey[200] : Colors.white,
-              child: Center(
-                child: Text(
-                  '${widget.number.display}',
-                  style: TextStyle(fontSize: 30.0, color: Colors.grey),
-                ),
+              child: Text(
+                '${widget.number.display}',
+                style: TextStyle(fontSize: 30.0, color: Colors.grey),
               ),
             ),
           ),

@@ -110,19 +110,16 @@ class CalculatorState extends State<StatefulWidget> {
           child: Column(
             children: <Widget>[
               Expanded(
-                key: Key('Result_Display'),
+                key: Key('Current_Display'),
                 flex: 2,
                 child: FractionallySizedBox(
                   widthFactor: 1.0,
                   heightFactor: 1.0,
                   child: Container(
                     color: Colors.lightBlue[300],
-                    child: Align(
-                      alignment: Alignment.bottomRight,
-                      child: Padding(
-                          padding: const EdgeInsets.all(16.0),
-                          child: ResultDisplay(result: currentDisplay)),
-                    ),
+                    alignment: Alignment.bottomRight,
+                    padding: const EdgeInsets.all(16.0),
+                    child: ResultDisplay(result: currentDisplay),
                   ),
                 ),
               ),

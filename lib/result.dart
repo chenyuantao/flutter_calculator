@@ -48,18 +48,17 @@ class ResultButtonState extends State<ResultButton> {
                 }
               },
               child: Container(
+                alignment: Alignment.center,
                 decoration: BoxDecoration(
                     color: pressed ? Colors.grey[200] : null,
                     border: Border.all(color: widget.color, width: 2.0),
                     borderRadius: BorderRadius.all(Radius.circular(16.0))),
-                child: Center(
-                  child: Text(
-                    '${widget.display}',
-                    style: TextStyle(
-                        fontSize: 36.0,
-                        color: widget.color,
-                        fontWeight: FontWeight.w300),
-                  ),
+                child: Text(
+                  '${widget.display}',
+                  style: TextStyle(
+                      fontSize: 36.0,
+                      color: widget.color,
+                      fontWeight: FontWeight.w300),
                 ),
               ),
             )));
@@ -98,15 +97,13 @@ class HistoryBlock extends StatelessWidget {
     return Padding(
       padding: EdgeInsets.only(top: 16.0, bottom: 16.0, right: 16.0),
       child: Container(
+        padding: EdgeInsets.all(16.0),
+        alignment: Alignment.center,
         decoration: BoxDecoration(
             color: result.oper != null ? result.oper.color : Colors.white54,
             borderRadius: BorderRadius.all(Radius.circular(16.0))),
-        child: Padding(
-          padding: EdgeInsets.all(16.0),
-          child: Center(
-              child: Text(text,
-                  style: TextStyle(fontSize: 30.0, color: Colors.black54))),
-        ),
+        child:
+            Text(text, style: TextStyle(fontSize: 30.0, color: Colors.black54)),
       ),
     );
   }

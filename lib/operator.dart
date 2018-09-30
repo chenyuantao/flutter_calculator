@@ -116,16 +116,15 @@ class OperatorButtonState extends State<OperatorButton> {
                 }
               },
               child: Container(
+                alignment: Alignment.center,
                 decoration: BoxDecoration(
                     color: pressed
                         ? Color.alphaBlend(Colors.white30, widget.oper.color)
                         : widget.oper.color,
                     borderRadius: BorderRadius.all(Radius.circular(100.0))),
-                child: Center(
-                  child: Text(
-                    '${widget.oper.display}',
-                    style: TextStyle(fontSize: 30.0, color: Colors.white),
-                  ),
+                child: Text(
+                  '${widget.oper.display}',
+                  style: TextStyle(fontSize: 30.0, color: Colors.white),
                 ),
               ),
             )));
